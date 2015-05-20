@@ -9,6 +9,11 @@ package com.thanhbc.market;
 
 public final class R {
     public static final class attr {
+        /**  Dạng đối tượng ImageView thay thế trong khi chờ tải ảnh và hiển thị trên ImageView cuối cùng
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int hideShowSibling=0x7f010000;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -24,20 +29,29 @@ public final class R {
     public static final class drawable {
         public static final int apptheme_ic_navigation_drawer=0x7f020000;
         public static final int drawer_shadow=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
+        public static final int empty_photo=0x7f020002;
+        public static final int ic_launcher=0x7f020003;
+        public static final int imagedownloadfailed=0x7f020004;
+        public static final int imagedownloading=0x7f020005;
+        public static final int imagenotqueued=0x7f020006;
+        public static final int imagequeued=0x7f020007;
+        public static final int shadow=0x7f020008;
     }
     public static final class id {
-        public static final int action_settings=0x7f080004;
+        public static final int action_settings=0x7f080006;
         public static final int container=0x7f080001;
         public static final int drawer_layout=0x7f080000;
         public static final int gridView1=0x7f080003;
+        public static final int img=0x7f080004;
         public static final int navigation_drawer=0x7f080002;
+        public static final int textName=0x7f080005;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int fragment_market_items=0x7f030001;
         public static final int fragment_navigation_drawer=0x7f030002;
-        public static final int list_item_navigation_drawer=0x7f030003;
+        public static final int grid_item_app=0x7f030003;
+        public static final int list_item_navigation_drawer=0x7f030004;
     }
     public static final class menu {
         public static final int main=0x7f070000;
@@ -79,4 +93,31 @@ public final class R {
          */
         public static final int AppTheme=0x7f060001;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a ImageDownloaderView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ImageDownloaderView_hideShowSibling com.thanhbc.market:hideShowSibling}</code></td><td> Dạng đối tượng ImageView thay thế trong khi chờ tải ảnh và hiển thị trên ImageView cuối cùng</td></tr>
+           </table>
+           @see #ImageDownloaderView_hideShowSibling
+         */
+        public static final int[] ImageDownloaderView = {
+            0x7f010000
+        };
+        /**
+          <p>
+          @attr description
+           Dạng đối tượng ImageView thay thế trong khi chờ tải ảnh và hiển thị trên ImageView cuối cùng
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name com.thanhbc.market:hideShowSibling
+        */
+        public static final int ImageDownloaderView_hideShowSibling = 0;
+    };
 }
