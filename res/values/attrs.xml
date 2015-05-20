@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ImageDownloaderView">
+        <!-- Dạng đối tượng ImageView thay thế trong khi chờ tải ảnh và hiển thị trên ImageView cuối cùng-->
+        <attr format="reference" name="hideShowSibling" />
+    </declare-styleable>        
+</resources>
