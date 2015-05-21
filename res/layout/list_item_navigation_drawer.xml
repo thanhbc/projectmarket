@@ -4,8 +4,8 @@
     android:layout_height="match_parent"
     android:text="@null"
     android:fontFamily="sans-serif-light"
-    android:padding="8dp"
-    android:textSize="18sp" 
+    android:padding="@dimen/navigation_drawer_text_padding"
+    android:textSize="@dimen/navigation_drawer_text_size" 
     android:id="@android:id/text1"
-   />
+    android:background="@drawable/apptheme_activated_background_holo_light"/>  
 

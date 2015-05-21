@@ -2,14 +2,13 @@ package com.thanhbc.market;
 
 
 import android.app.Activity;
-import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Toast;
 
 import com.thanhbc.fragments.NavigationDrawerFragment;
 import com.thanhbc.fragments.NavigationDrawerFragment.NavigationDrawerCallBacks;
@@ -21,9 +20,9 @@ public class MainActivity extends Activity implements NavigationDrawerCallBacks 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
+				
 		WindowManager.LayoutParams attrs = getWindow().getAttributes();
-		attrs.flags |= WindowManager.LayoutParams.FLAG_FULLSCREEN;
+		attrs.flags |= WindowManager.LayoutParams.FLAG_FULLSCREEN;		
 		getWindow().setAttributes(attrs);
 		
 		setContentView(R.layout.activity_main);

@@ -3,6 +3,8 @@
     android:id="@+id/gridView1"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:padding="10dp" >
+    android:padding="10dp" 
+     android:layoutAnimation="@anim/layout_grid_right_to_left"
+     android:layoutDirection="ltr">     
 
 </GridView>

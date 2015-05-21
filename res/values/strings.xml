@@ -9,4 +9,9 @@
     <string name="item_wish_list"> Wish List</string>
 	<string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="sans_serif_lghit_font">sans-serif-light</string>
+    <string name="no_connection_alert">Không có kết nối mạng!</string>
+    <string name="no_connection_des">Ứng dụng cần kết nối mạng để truy cập.</string>
+     <string name="quit_app">Thoát</string>
+    <string name="connect">Kết nối</string>
 </resources>

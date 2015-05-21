@@ -11,12 +11,11 @@ import javax.net.ssl.HttpsURLConnection;
 
 import org.json.JSONObject;
 
-import com.thanhbc.marketservicelibs.utils.ParseJson;
-
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
-import android.os.IInterface;
+
+import com.thanhbc.marketservicelibs.utils.ParseJson;
 
 public abstract class MyMarketService extends AsyncTask implements DataReceiver{
 	

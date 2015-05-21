@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="@style/_AppTheme" />
+
+    <style name="_AppTheme" parent="@android:style/Theme.Holo.Light">
+        
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_osactionbarstyle</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Osactionbarstyle</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Osactionbarstyle</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Osactionbarstyle</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Osactionbarstyle</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Osactionbarstyle</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_osactionbarstyle</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_osactionbarstyle</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Osactionbarstyle</item>
+        
+<!--         <item name="calendarViewStyle">@style/Widget.Holo.CalendarView</item>
+        <item name="datePickerStyle">@style/Widget.Holo.DatePicker</item>
+        <item name="numberPickerStyle">@style/NPWidget.Holo.NumberPicker</item> -->
+        
+        <item name="android:titleTextStyle">@style/OSTitleTextStyle</item>
+<!--         <item name="android:actionBarItemBackground">@drawable/bg_menu_app_theme</item>
+ -->        <!-- <item name="android:actionBarStyle">@style/OSActionBarStyle</item> -->
+        <item name="android:editTextStyle">@style/EditTextAppTheme</item>
+        <item name="android:textColorHighlight">#99aa66cc</item>
+        <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextViewAppTheme</item>
+        <item name="android:checkboxStyle">@style/CheckBoxAppTheme</item>
+        <item name="android:radioButtonStyle">@style/RadioButtonAppTheme</item>
+        <item name="android:buttonStyle">@style/ButtonAppTheme</item>
+        <item name="android:imageButtonStyle">@style/ImageButtonAppTheme</item>
+        <item name="android:spinnerStyle">@style/SpinnerAppTheme</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItemAppTheme</item>
+        <item name="android:progressBarStyleHorizontal">@style/ProgressBarAppTheme</item>
+        <item name="android:seekBarStyle">@style/SeekBarAppTheme</item>
+        <item name="android:ratingBarStyle">@style/RatingBarAppTheme</item>
+        <item name="android:ratingBarStyleIndicator">@style/RatingBarBigAppTheme</item>
+        <item name="android:ratingBarStyleSmall">@style/RatingBarSmallAppTheme</item>
+        <item name="android:buttonStyleToggle">@style/ToggleAppTheme</item>
+        <item name="android:listViewStyle">@style/ListViewAppTheme</item>
+        <item name="android:listViewWhiteStyle">@style/ListViewAppTheme.White</item>
+        <item name="android:spinnerItemStyle">@style/SpinnerItemAppTheme</item>
+        <item name="android:textViewStyle">@style/TextViewAppTheme</item>
+<!--         <item name="android:popupMenuStyle">@style/PopupMenu</item>
+ -->    </style>
+
+</resources>
