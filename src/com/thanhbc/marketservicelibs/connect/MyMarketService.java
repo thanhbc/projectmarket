@@ -14,6 +14,8 @@ import org.json.JSONObject;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
+import android.view.View;
+import android.widget.RelativeLayout;
 
 import com.thanhbc.marketservicelibs.utils.ParseJson;
 
@@ -23,6 +25,7 @@ public abstract class MyMarketService extends AsyncTask implements DataReceiver{
 	
 	
 	private ProgressDialog mProgressDialog;
+	private RelativeLayout mLoadingPanel;
 	private Activity mActivity;
 	
 	public MyMarketService (Activity activity) {
@@ -38,10 +41,12 @@ public abstract class MyMarketService extends AsyncTask implements DataReceiver{
 	
 	
 	public abstract ProgressDialog showWaitingDialog();
-	
+	public abstract RelativeLayout loadingPanel();	
 	@Override
 	protected void onPreExecute() {
 		 mProgressDialog = showWaitingDialog();
+		 mLoadingPanel=loadingPanel();
+		 
 	        if(mProgressDialog != null)
 	        {
 	            mProgressDialog.show();
@@ -107,6 +112,9 @@ public abstract class MyMarketService extends AsyncTask implements DataReceiver{
         {
             mProgressDialog.dismiss();
         }
+		if(mLoadingPanel!=null){
+			mLoadingPanel.setVisibility(View.GONE);
+		}
 		
 		if(result!=null){
 			int status =ParseJson.getResultStatus(result);
