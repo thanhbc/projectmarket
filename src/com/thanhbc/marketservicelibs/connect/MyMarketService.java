@@ -39,6 +39,9 @@ public abstract class MyMarketService extends AsyncTask implements DataReceiver{
 	  execute(new String[]{"","https://dl.dropboxusercontent.com/s/byekjw85sil3293/jsonMarket.txt?dl=0"});
 	}
 	
+	public void getMarketItemDetails(String link){
+		execute(new String[]{"",link});
+	}
 	
 	public abstract ProgressDialog showWaitingDialog();
 	public abstract RelativeLayout loadingPanel();	

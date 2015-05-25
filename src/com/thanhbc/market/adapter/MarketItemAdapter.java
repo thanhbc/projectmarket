@@ -5,19 +5,23 @@ import java.net.URL;
 import java.util.ArrayList;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 
 import com.thanhbc.libs.imageview.PhotoView;
+import com.thanhbc.market.MarketItemDetailActivity;
 import com.thanhbc.market.R;
 import com.thanhbc.market.obj.MarketItem;
 
-public class MarketItemAdapter extends BaseAdapter {
+public class MarketItemAdapter extends BaseAdapter{
 	private Context context;
 	private ArrayList<MarketItem> items = new ArrayList<MarketItem>();
 	
@@ -77,6 +81,22 @@ public class MarketItemAdapter extends BaseAdapter {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		final int pos = position;
+		holder.img.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(context,MarketItemDetailActivity.class);
+				Bundle bundle = new Bundle();
+				bundle.putString("linkDetail", items.get(pos).getLinkDetail());
+				intent.putExtras(bundle);
+				context.startActivity(intent);
+				
+				
+				
+			}
+		});
+		
 		
 		return convertView;
 	}
@@ -87,4 +107,5 @@ private class ViewHolder{
 	private TextView textName;	
 	private PhotoView img; 
 }
+
 }

@@ -9,6 +9,13 @@ import org.json.JSONObject;
 public class MarketItem {
 	
 	private String name;	
+	private String linkDetail;
+	public String getLinkDetail() {
+		return linkDetail;
+	}
+	public void setLinkDetail(String linkDetail) {
+		this.linkDetail = linkDetail;
+	}
 	public String getName() {
 		return name;
 	}
@@ -21,6 +28,7 @@ public class MarketItem {
 	public void setImgLink(String imgLink) {
 		this.imgLink = imgLink;
 	}
+	
 	private String imgLink;
 	
 public static ArrayList<MarketItem> parseValue(String data) {
@@ -38,7 +46,7 @@ public static ArrayList<MarketItem> parseValue(String data) {
 				MarketItem item = new MarketItem();
 				item.setName(jsonObject.getString("name"));				
 				item.setImgLink(jsonObject.getString("imgLink"));
-				
+				item.setLinkDetail(jsonObject.getString("linkDetails"));
 				shopItems.add(item);
 			}
 			

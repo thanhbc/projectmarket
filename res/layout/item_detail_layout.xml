@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <include layout="@layout/fragment_loading"/>
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+         <com.thanhbc.libs.imageview.PhotoView
+             android:id="@+id/imgDetail"
+             android:layout_marginTop="24dp"
+             android:layout_marginLeft="24dp"
+             android:layout_width="240dp"
+             android:layout_height="240dp"
+             android:contentDescription="@null"/>
+
+         <TextView
+             android:id="@+id/appName"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_alignParentTop="true"
+             android:layout_toRightOf="@+id/imgDetail"
+             android:layout_marginTop="12dp"
+             android:layout_marginLeft="24dp"
+             android:text="@null" 
+             android:fontFamily="@string/sans_serif_lghit_font"
+             android:textSize="@dimen/navigation_drawer_text_size"/>
+
+         <TextView
+             android:id="@+id/appDescription"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"             
+             android:layout_below="@+id/appName"
+             android:layout_toRightOf="@+id/imgDetail"
+             android:layout_marginTop="24dp"
+             android:layout_marginLeft="24dp"
+             android:fontFamily="@string/sans_serif_lghit_font"
+             android:text="@null" />
+    
+     </RelativeLayout>
+<LinearLayout 
+     android:layout_width="fill_parent"
+     android:layout_height="200dp"
+     android:layout_marginTop="20dp"
+     android:orientation="vertical">
+    <com.thanhbc.libs.horizontallistview.HorizontalListView
+        android:id="@+id/gridImgDescription"        
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"           
+        />
+</LinearLayout>
+</LinearLayout>

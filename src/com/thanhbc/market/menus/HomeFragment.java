@@ -20,6 +20,7 @@ import android.widget.Toast;
 import com.thanhbc.market.R;
 import com.thanhbc.market.adapter.MarketItemAdapter;
 import com.thanhbc.market.obj.MarketItem;
+import com.thanhbc.market.utils.Loading;
 import com.thanhbc.marketservicelibs.connect.MyMarketService;
 
 public class HomeFragment extends Fragment {
@@ -39,7 +40,7 @@ public class HomeFragment extends Fragment {
 				.findViewById(R.id.loadingImage);
 		GridView rootView = (GridView) mainView.findViewById(R.id.gridView1);
 
-		showLoading(loadingImage);
+		Loading.showLoading(loadingImage,getActivity());
 
 		DisplayMetrics displayMetrics = getActivity().getResources()
 				.getDisplayMetrics();
@@ -91,48 +92,8 @@ public class HomeFragment extends Fragment {
 		//
 		rootView.setAdapter(adapter);
 
-		Toast.makeText(getActivity(), "This is toast from HomeFragment",
+		Toast.makeText(getActivity(), "Getting data from server....",
 				Toast.LENGTH_SHORT).show();
 		return mainView;
 	}
-
-	private void showLoading(ImageView loadingImage) {
-		try {
-			BitmapDrawable frame1 = (BitmapDrawable) getResources()
-					.getDrawable(
-							R.drawable.apptheme_progressbar_indeterminate_holo1);
-			BitmapDrawable frame2 = (BitmapDrawable) getResources()
-					.getDrawable(
-							R.drawable.apptheme_progressbar_indeterminate_holo2);
-			BitmapDrawable frame3 = (BitmapDrawable) getResources()
-					.getDrawable(
-							R.drawable.apptheme_progressbar_indeterminate_holo3);
-			BitmapDrawable frame4 = (BitmapDrawable) getResources()
-					.getDrawable(
-							R.drawable.apptheme_progressbar_indeterminate_holo4);
-			BitmapDrawable frame5 = (BitmapDrawable) getResources()
-					.getDrawable(
-							R.drawable.apptheme_progressbar_indeterminate_holo5);
-			BitmapDrawable frame6 = (BitmapDrawable) getResources()
-					.getDrawable(
-							R.drawable.apptheme_progressbar_indeterminate_holo6);
-			BitmapDrawable frame7 = (BitmapDrawable) getResources()
-					.getDrawable(
-							R.drawable.apptheme_progressbar_indeterminate_holo7);
-
-			AnimationDrawable Anim = new AnimationDrawable();
-			Anim.addFrame(frame1, 100);
-			Anim.addFrame(frame2, 100);
-			Anim.addFrame(frame3, 100);
-			Anim.addFrame(frame4, 100);
-			Anim.addFrame(frame5, 100);
-			Anim.addFrame(frame6, 100);
-			Anim.setOneShot(false);
-			loadingImage.setBackgroundDrawable(Anim);
-			 Anim.start();
-		} catch (Exception e) {
-
-		}
 	}
-
-}
