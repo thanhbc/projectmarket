@@ -1,9 +1,11 @@
 package com.thanhbc.market;
 
+import java.util.ArrayList;
 
-import android.app.Activity;
-import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,20 +13,24 @@ import android.view.WindowManager;
 
 import com.thanhbc.fragments.NavigationDrawerFragment;
 import com.thanhbc.fragments.NavigationDrawerFragment.NavigationDrawerCallBacks;
+import com.thanhbc.market.menus.MainFragment;
 import com.thanhbc.market.menus.HomeFragment;
 
-public class MainActivity extends Activity implements NavigationDrawerCallBacks {
+public class MainActivity extends FragmentActivity implements
+		NavigationDrawerCallBacks {
 
-	private NavigationDrawerFragment mNavigationDrawerFragment; 
+	private NavigationDrawerFragment mNavigationDrawerFragment;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-				
+
 		WindowManager.LayoutParams attrs = getWindow().getAttributes();
-		attrs.flags |= WindowManager.LayoutParams.FLAG_FULLSCREEN;		
+		attrs.flags |= WindowManager.LayoutParams.FLAG_FULLSCREEN;
 		getWindow().setAttributes(attrs);
-		
+
 		setContentView(R.layout.activity_main);
+
 		
 		mNavigationDrawerFragment = (NavigationDrawerFragment) getFragmentManager()
 				.findFragmentById(R.id.navigation_drawer);
@@ -53,18 +59,39 @@ public class MainActivity extends Activity implements NavigationDrawerCallBacks 
 	}
 
 	@Override
-	public void onNavigationDrawerItemSelected(int position) {
-		FragmentTransaction ft = getFragmentManager().beginTransaction();
-		
-		switch (position) {
-		case 0:
-			ft.replace(R.id.container, new HomeFragment(), "HomeFragment");
-			ft.commit();			
-			break;
-
-		default:
-			break;
-		}
-					
+	protected void onSaveInstanceState(Bundle outState) {
+		// TODO Auto-generated method stub
+		super.onSaveInstanceState(outState);
 	}
-}
+
+	@Override
+	protected void onRestoreInstanceState(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onRestoreInstanceState(savedInstanceState);
+	}
+	
+	
+	@Override
+	public void onNavigationDrawerItemSelected(int position) {
+		 FragmentTransaction ft =
+		 getSupportFragmentManager().beginTransaction();
+		 Fragment fragment;
+		 switch (position) {
+		 case 0:
+		 fragment = getSupportFragmentManager().findFragmentByTag("MainFragment");
+		 if(fragment==null){
+		 ft.replace(R.id.container, new MainFragment(), "MainFragment");
+		 }else{
+			 ft.replace(R.id.container, fragment, "MainFragment");
+		 }
+		 ft.commit();
+		 
+		 break;
+		
+		 default:
+		 break;
+		 }
+
+	}
+
+	}

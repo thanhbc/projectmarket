@@ -1,12 +1,15 @@
 package com.thanhbc.market.obj;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class MarketItem {
+public class MarketItem implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
 	
 	private String name;	
 	private String linkDetail;

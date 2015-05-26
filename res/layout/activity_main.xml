@@ -8,15 +8,13 @@
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-
-
-    <fragment
+        android:layout_height="match_parent" />    	
+	    
+	<fragment
         android:id="@+id/navigation_drawer"  
         android:name="com.thanhbc.fragments.NavigationDrawerFragment"            
         android:layout_width="@dimen/navigation_drawer_layout_size"
         android:layout_height="match_parent"
         android:layout_gravity="start" />
-
+    
 </android.support.v4.widget.DrawerLayout>

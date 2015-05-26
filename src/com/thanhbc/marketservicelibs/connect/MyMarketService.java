@@ -62,11 +62,11 @@ public abstract class MyMarketService extends AsyncTask implements DataReceiver{
 		HttpsURLConnection connection;
 		
 		
-		try {
-			Thread.sleep(1000L);
-		} catch (InterruptedException e) {
-			   e.printStackTrace();
-		}
+//		try {
+////			Thread.sleep(1000L);
+//		} catch (InterruptedException e) {
+//			   e.printStackTrace();
+//		}
 		
 		
 		connection=null;
