@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-   <com.thanhbc.libs.imageview.PhotoView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:background="#fff"
+  >
+   <com.thanhbc.libs.imageview.PhotoView 
         android:id="@+id/imgDescription"
-        android:layout_width="wrap_content"        
-        android:layout_height="wrap_content"                   
+        android:layout_width="240dp"
+        android:layout_height="240dp"                                 
         android:contentDescription="@null"        
-        android:src="@drawable/ic_launcher" />
+        android:src="@drawable/ic_launcher"
+        />
+  </LinearLayout>

@@ -150,7 +150,7 @@ public class HomeFragment extends Fragment {
 			};
 
 			service.getAllMarketItem();
-			Toast.makeText(getActivity(), "Getting data from server....",Toast.LENGTH_SHORT).show();
+			//Toast.makeText(getActivity(), "Getting data from server....",Toast.LENGTH_SHORT).show();
 		}else{
 			adapter.setMarketItems(items);
 		}

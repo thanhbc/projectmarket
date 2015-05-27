@@ -58,7 +58,7 @@ public class MarketItemDetail implements Serializable{
 				JSONArray imgDescriptionLinks = new JSONArray(jsonObject.getString("imgDescriptionLinks"));
 				ArrayList<String> imgLink = new ArrayList<String>();
 				for (int j = 0; j < imgDescriptionLinks.length(); j++) {					
-					JSONObject  jsonObject1 = imgDescriptionLinks.getJSONObject(i);
+					JSONObject  jsonObject1 = imgDescriptionLinks.getJSONObject(j);
 					imgLink.add(jsonObject1.getString("link"));					
 				}
 				item.setListImgLink(imgLink);

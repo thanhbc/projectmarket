@@ -8,6 +8,7 @@ import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.BaseAdapter;
 
 import com.thanhbc.libs.imageview.PhotoView;
@@ -60,7 +61,9 @@ public class MarketItemDetailImageAdapter extends BaseAdapter {
 			}else{
 				holder = (ViewHolder)convertView.getTag();			
 			}
-			//LayoutParams params = new LayoutParams(colHeight, colHeight);
+//			LayoutParams params = new LayoutParams(240, 240);
+//			holder.imgLink.setLayoutParams(params);
+			
 			Drawable mEmptyDrawable = context.getResources().getDrawable(R.drawable.empty_photo);
 			try {
 				holder.imgLink.setImageURL(new URL(listLinkImgs.get(position)), true, mEmptyDrawable);
